@@ -23,6 +23,7 @@ const App = () => {
     { id: 2, name: 'Dell Laptop', description: 'Elegance in Every Click', price: 899.99 },
   ];
 
+  
   const mobiles = [
     { id: 1, name: 'Samsung Mobile', description: 'Innovation in Hand', price: 299.99 },
     { id: 2, name: 'iPhone Mobile', description: 'Elegance in Innovation', price: 499.99 },
