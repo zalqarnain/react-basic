@@ -21,7 +21,7 @@ const App = () => {
   // Dummy product data
   const laptops = [
     { id: 1, name: 'HP Laptop', description: 'Powerful Performance, Sleek Design', price: 999.99 },
-    { id: 2, name: 'Dell Laptop', description: 'Elegance in Every Click', price: 899.99 },
+    { id: 2, name: 'Lenovo Laptop', description: 'Elegance in Every Click', price: 899.99 },
   ];
 
   
