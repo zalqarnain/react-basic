@@ -7,6 +7,7 @@ import Cart from './Cart';
 import Home from './Home';
 
 const App = () => {
+  //cart state
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
