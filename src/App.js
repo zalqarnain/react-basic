@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import ProductList from './ProductList';
 import Cart from './Cart';
 import Home from './Home';
+import Footer from './Footer';
 
 const App = () => {
   //cart state
@@ -61,6 +62,8 @@ const App = () => {
           element={<Cart cart={cart} removeFromCart={removeFromCart} />}
         />
       </Routes>
+      <Footer />
+
     </Router>
   );
 };

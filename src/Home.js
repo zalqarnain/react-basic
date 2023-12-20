@@ -5,6 +5,8 @@ import { Container, Typography, Paper } from '@mui/material';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Card, CardContent, Avatar, Grid } from '@mui/material';
+import PersonIcon from '@mui/icons-material/Person';
 
 function SliderItem({ title, imageUrl }) {
   return (
@@ -16,6 +18,55 @@ function SliderItem({ title, imageUrl }) {
     </Paper>
   );
 }
+
+function Reviews() {
+  const clientReviews = [
+    {
+      id: 1,
+      author: 'John Doe',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      id: 2,
+      author: 'Jane Smith',
+      text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      id: 2,
+      author: 'Peter John',
+      text: 'Lorem ipsum dolor sit amet ut labore et dolore magna aliqua.',
+    },
+  ];
+
+  return (
+    <div>
+      <Typography variant="h5" gutterBottom>
+        Client Reviews
+      </Typography>
+      <Grid container spacing={2}>
+        {clientReviews.map((review) => (
+          <Grid item key={review.id} xs={12} sm={6} md={4}>
+            <Card elevation={3} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <CardContent>
+                <Avatar sx={{ width: 56, height: 56, margin: 'auto' }}>
+                  <PersonIcon />
+                </Avatar>
+                <Typography variant="subtitle1" align="center" sx={{ marginTop: 2 }}>
+                  {review.author}
+                </Typography>
+                <Typography variant="body2" align="center" sx={{ marginTop: 2 }}>
+                  {review.text}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </div>
+  );
+}
+
+
 
 function Home(props) {
   const slideshowItems = [
@@ -48,6 +99,9 @@ function Home(props) {
           <SliderItem key={item.id} title={item.title} imageUrl={item.imageUrl} />
         ))}
       </Slider>
+
+      <Reviews />
+
     </Container>
   );
 }
